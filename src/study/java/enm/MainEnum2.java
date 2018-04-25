@@ -1,5 +1,7 @@
 package study.java.enm;
 
+import java.util.stream.IntStream;
+
 public class MainEnum2 {
 	public static void main(String[]args) {
 		
@@ -14,5 +16,9 @@ public class MainEnum2 {
 		long tmp2 = calcJava7.calculater(50);
 		System.out.println("calc--->>"+tmp2);
 		
+		System.out.println("=================================");
+		IntStream.range(0, 10).filter(i -> i%2 != 0).forEach(
+				System.out::println
+				);
 	}
 }

@@ -27,10 +27,10 @@ public class LamdaTest {
 		Stream<Integer> st = Arrays.asList(1,2,3).stream();
 		Stream<Integer> st2 = Arrays.asList(1,2,3).parallelStream();
 		
-		st.forEach(System.out::println);
+		st2.forEach(System.out::println);
 
-		//st.limit(2).forEach(System.out::println);
-		//st.skip(2).forEach(System.out::println);
+//		st.limit(2).forEach(System.out::println);
+//		st.skip(2).forEach(System.out::println);
 		//st.filter(i -> i>=2).forEach(System.out::println);
 		//st.reduce((a,b)-> a-b).get();
 		
@@ -51,7 +51,7 @@ public class LamdaTest {
 		List<Fruit> appleList = extractFruitList(fruits, fruit -> "apple".equals(fruit.getName()));
 		List<Fruit> redList = extractFruitList(fruits, fruit -> "red".equals(fruit.getColor()));
 
-
+		System.out.println("str11111-->>"+redList.toString());
 	}
 	
 	static List<Fruit> extractFruitList(List<Fruit> fruits, Predicate<Fruit> predicate){
