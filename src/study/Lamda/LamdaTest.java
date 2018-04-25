@@ -1,12 +1,11 @@
-package thread;
+package study.Lamda;
+
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.function.Predicate;
 import java.util.stream.Stream;
-
-import org.apache.commons.collections.map.HashedMap;
 
 public class LamdaTest {
 

@@ -1,4 +1,4 @@
-package thread;
+package study.Lamda;
 
 public class Fruit {
 	private String name;

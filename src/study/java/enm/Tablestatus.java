@@ -17,7 +17,7 @@ public enum Tablestatus {
 	}
 
 
-	public boolean isTbl2() {
+	public boolean getTbl2() {
 		return tbl2;
 	}
 }

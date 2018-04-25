@@ -1,4 +1,5 @@
-package thread;
+package study.Lamda;
+
 
 @FunctionalInterface
 interface Func {

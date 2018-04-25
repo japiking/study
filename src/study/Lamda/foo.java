@@ -1,4 +1,4 @@
-package thread;
+package study.Lamda;
 
 import java.util.Random;
 

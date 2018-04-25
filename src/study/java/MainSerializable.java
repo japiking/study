@@ -7,12 +7,12 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.Base64;
 /**
- * ÀÚ¹Ù Á÷·ÄÈ­ ÇüÅÂÀÇ µ¥ÀÌÅÍ ±³È¯Àº ÀÚ¹Ù ½Ã½ºÅÛ °£ÀÇ µ¥ÀÌÅÍ ±³È¯À» À§ÇØ¼­ Á¸ÀçÇÑ´Ù.
- * ÀÚ¹Ù Á÷·ÄÈ­´Â ÀÚ¹Ù ½Ã½ºÅÛ¿¡¼­ °³¹ß¿¡ ÃÖÀûÈ­µÇ¾î ÀÖ½À´Ï´Ù. 
- * º¹ÀâÇÑ µ¥ÀÌÅÍ ±¸Á¶ÀÇ Å¬·¡½ºÀÇ °´Ã¼¶óµµ Á÷·ÄÈ­ ±âº» Á¶°Ç¸¸ ÁöÅ°¸é Å« ÀÛ¾÷ ¾øÀÌ ¹Ù·Î Á÷·ÄÈ­¸¦ °¡´ÉÇÕ´Ï´Ù. ¹°·Ğ ¿ªÁ÷·ÄÈ­µµ ¸¶Âù°¡ÁöÀÔ´Ï´Ù.
+ * ìë°” ì§ë ¬í™” í˜•íƒœì˜ ë°ì´í„° êµí™˜ì€ ìë°” ì‹œìŠ¤í…œ ê°„ì˜ ë°ì´í„° êµí™˜ì„ ìœ„í•´ì„œ ì¡´ì¬í•œë‹¤.
+ * ìë°” ì§ë ¬í™”ëŠ” ìë°” ì‹œìŠ¤í…œì—ì„œ ê°œë°œì— ìµœì í™”ë˜ì–´ ìˆìŠµë‹ˆë‹¤. 
+ * ë³µì¡í•œ ë°ì´í„° êµ¬ì¡°ì˜ í´ë˜ìŠ¤ì˜ ê°ì²´ë¼ë„ ì§ë ¬í™” ê¸°ë³¸ ì¡°ê±´ë§Œ ì§€í‚¤ë©´ í° ì‘ì—… ì—†ì´ ë°”ë¡œ ì§ë ¬í™”ë¥¼ ê°€ëŠ¥í•©ë‹ˆë‹¤. ë¬¼ë¡  ì—­ì§ë ¬í™”ë„ ë§ˆì°¬ê°€ì§€ì…ë‹ˆë‹¤.
  * 
- * Á÷·ÄÈ­ ´ë»ó Å¬·¡½º°¡ º¯°æµÇ´õ¶óµµ serialVersionUID°¡ °íÁ¤µÇ¾î °°Àº °ªÀ» »ç¿ëÇÒ °æ¿ì¿¡´Â Å¬·¡½º ¼öÁ¤ÇÏ´õ¶óµµ »ç¿ë°¡´É
- * ÇÏÁö¸¸ º¯¼ö Å¸ÀÔÀÌ º¯°æµÉ °æ¿ì¿¡´Â ¿¡·¯°¡ ¹ß»ıÇÕ´Ï´Ù.
+ * ì§ë ¬í™” ëŒ€ìƒ í´ë˜ìŠ¤ê°€ ë³€ê²½ë˜ë”ë¼ë„ serialVersionUIDê°€ ê³ ì •ë˜ì–´ ê°™ì€ ê°’ì„ ì‚¬ìš©í•  ê²½ìš°ì—ëŠ” í´ë˜ìŠ¤ ìˆ˜ì •í•˜ë”ë¼ë„ ì‚¬ìš©ê°€ëŠ¥
+ * í•˜ì§€ë§Œ ë³€ìˆ˜ íƒ€ì…ì´ ë³€ê²½ë  ê²½ìš°ì—ëŠ” ì—ëŸ¬ê°€ ë°œìƒí•©ë‹ˆë‹¤.
  * @author S-Jin
  *
  */
@@ -20,22 +20,22 @@ public class MainSerializable {
 
 	public static void main(String[] args) throws IOException {
 		try {
-			Member member = new Member("ÀÌ»óÁø", "japicel@gmail.com", 36);
+			Member member = new Member("ï¿½Ì»ï¿½ï¿½ï¿½", "japicel@gmail.com", 36);
 			String data = makeData(member);
 			
-			System.out.println("Á÷·ÄÈ­ µ¥ÀÌÅÍ : "+data);
+			System.out.println("ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ : "+data);
 
 			System.out.println("========================================================================");
 			
 			Member member2 = getMember(data);
-			System.out.println("Á÷·ÄÈ­ µ¥ÀÌÅÍ2 Name  : "+member2.getName());
-			System.out.println("Á÷·ÄÈ­ µ¥ÀÌÅÍ2 Email : "+member2.getEmail());
+			System.out.println("ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2 Name  : "+member2.getName());
+			System.out.println("ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½2 Email : "+member2.getEmail());
 		}catch(Exception e) {
 			e.printStackTrace();
 		}
 	}
 	/**
-	 * Á÷·ÄÈ­µÈ µ¥ÀÌÅÍ¸¦ ÀĞ¾î¿É´Ï´Ù.
+	 * ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½Ğ¾ï¿½É´Ï´ï¿½.
 	 * @param data
 	 * @return
 	 */
@@ -44,7 +44,7 @@ public class MainSerializable {
 		try(ByteArrayInputStream bais = new ByteArrayInputStream(serializableMember)){
 			try(ObjectInputStream ois = new ObjectInputStream(bais)){
 				
-				//¿ª Á÷·ÄÈ­µÈ Member¸¦ ÀĞ¾î¿Â´Ù.
+				//ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ï¿½ï¿½ Memberï¿½ï¿½ ï¿½Ğ¾ï¿½Â´ï¿½.
 				Object objectMeber = ois.readObject();
 				Member member = (Member)objectMeber;
 				
@@ -54,7 +54,7 @@ public class MainSerializable {
 	}
 	
 	/**
-	 * Á÷·ÄÈ­ µ¥ÀÌÅÍ¸¦ »ı¼ºÇÕ´Ï´Ù.
+	 * ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½Õ´Ï´ï¿½.
 	 * @param member
 	 * @return
 	 */
@@ -72,7 +72,7 @@ public class MainSerializable {
 			e.printStackTrace();
 		}
 		
-		//System byte ¹è¿­·Î »ı¼ºµÈ Á÷·ÄÈ­ µ¥ÀÌÅÍ¸¦ base64·Î ÀÎÄÚµù
+		//System byte ï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½È­ ï¿½ï¿½ï¿½ï¿½ï¿½Í¸ï¿½ base64ï¿½ï¿½ ï¿½ï¿½ï¿½Úµï¿½
 		String data = Base64.getEncoder().encodeToString(serializableMember);
 		
 		return data;
