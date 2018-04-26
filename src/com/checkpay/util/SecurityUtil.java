@@ -9,7 +9,7 @@ import java.security.spec.*;
 
 import org.apache.commons.codec.binary.Base64;
 
-public class SecurityUtil {
+public class SecurityUtil { 
 	
 	
 	public static byte[] ivBytes = { 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 0x00, 
